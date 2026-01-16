@@ -1,36 +1,27 @@
-# CURSO GIT PARA ARTISTAS
-CURSO GIT PARA ARTISTAS
+# 🎓 Curso Git para Artistas & Criativos
 
-curso-git-para-artistas/
-│
-├── README.md
-│
-├── 01-fundamentos/
-│   └── README.md
-│
-├── 02-commit/
-│   └── README.md
-│
-├── 03-branch/
-│   └── README.md
-│
-├── 04-merge/
-│   └── README.md
-│
-├── 05-conflitos/
-│   └── README.md
-│
-├── exercicios/
-│   ├── exercicio-01/
-│   ├── exercicio-02/
-│   └── exercicio-03/
-│
-├── erros-propositais/
-│   ├── conflito-simulado/
-│   ├── commit-errado/
-│   └── merge-problematico/
-│
-└── material-extra/
-    ├── diagramas/
-    └── checklists/
+Este repositório faz parte do curso **Git para Artistas & Criativos**, criado por Edy.
 
+Aqui você vai aprender Git usando uma linguagem artística:
+- Commit = registro de ensaio
+- Branch = sala de ensaio
+- Main = show oficial
+- Merge = estreia no palco
+
+## 🎯 Objetivo
+Ensinar artistas, dançarinos e criadores a:
+- não perder versões
+- trabalhar com segurança
+- organizar projetos criativos
+
+## 📚 Estrutura
+Siga as pastas na ordem:
+1. Fundamentos
+2. Commit
+3. Branch
+4. Merge
+5. Conflitos
+6. Exercícios
+7. Erros propositalmente criados para treino real
+
+🚀 Bons estudos!
