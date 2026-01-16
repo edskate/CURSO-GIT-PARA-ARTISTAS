@@ -1,0 +1,37 @@
+/show-oficial-2026
+│
+├─ /setlist
+│   ├─ pocket-23min.md
+│   ├─ pocket-45min.md
+│   └─ palco-grande.md
+│
+├─ /coreografias
+│   ├─ dangerous.md
+│   ├─ smooth-criminal.md
+│   └─ beat-it.md
+│
+├─ /figurinos
+│   ├─ dangerous.txt
+│   ├─ billie-jean.txt
+│   └─ backup.md
+│
+├─ /palco-luz
+│   ├─ mapa-luz.md
+│   └─ entrada-climax.md
+│
+├─ /ensaios
+│   ├─ 2026-01-10.md
+│   └─ 2026-01-15.md
+│
+└─ /audicoes
+    └─ chamada-dancarinos.md
+ # show-oficial-2026
+Descrição: Documentação completa do show oficial de 2026, incluindo setlist, coreograf.
+
+tipo: ação (contexto)
+
+coreografia: ajusta clímax final (Beat It)
+figurino: revisa luva e jaqueta (Dangerous)
+ensaio: marca posição palco lado direito
+palco: ajusta tempo de blackout no refrão
+pocket: adapta transição 23min → 45min
