@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mermaid – Árvore de Dança (Método Edy)</title>
+
+  <!-- Mermaid (render automático) -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <!-- Exportar PDF (1 clique) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#121a24;
+      --line:#223043;
+      --text:#eaf2ff;
+      --muted:#9fb2cc;
+      --accent:#00e5ff;
+      --ok:#2cff88;
+      --warn:#ffd166;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; padding:20px;
+      font-family:system-ui,Segoe UI,Arial;
+      background:var(--bg); color:var(--text);
+    }
+    .wrap{max-width:1100px;margin:0 auto}
+    h1{margin:0 0 8px 0; text-align:center; color:var(--accent)}
+    p{margin:0 0 18px 0; text-align:center; color:var(--muted)}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 16px 40px rgba(0,0,0,.35);
+      overflow:auto;
+    }
+    .controls{
+      display:flex; justify-content:center; gap:10px;
+      margin:16px 0 0 0; flex-wrap:wrap;
+    }
+    button{
+      background:#0f1620;
+      border:1px solid var(--line);
+      color:var(--text);
+      padding:12px 16px;
+      border-radius:14px;
+      cursor:pointer;
+      font-weight:800;
+    }
+    button:hover{border-color:var(--accent)}
+    .legend{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:10px;
+    }
+    .legend .box{
+      background:#0f1620;
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .ok{color:var(--ok); font-weight:900}
+    .warn{color:var(--warn); font-weight:900}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- Tudo aqui dentro vai para o PDF -->
+    <div id="exportArea">
+      <h1>🌳 Árvore de Dança – Método Edy</h1>
+      <p>Render Mermaid sem GitHub + Exportar PDF com 1 clique</p>
+
+      <div class="card">
+        <pre class="mermaid">
+flowchart TD
+A[🎭 Show Base / Tronco] --> B[🦶 Técnica]
+A --> C[🎵 Musicalidade]
+A --> D[🎩 Estilo]
+A --> E[⏱️ Pocket Show]
+A --> F[🏟️ Palco Grande]
+A --> G[🕺 Turista]
+A --> H[🧪 Ensaio]
+
+E --> E1[23 min]
+E --> E2[30 min]
+
+D --> D1[MJ Classic]
+D --> D2[Modern Pop]
+
+B --> X{Aprovado no ensaio?}
+C --> X
+D --> X
+E --> X
+F --> X
+G --> X
+H --> X
+
+X -- Sim --> M[✅ MERGE no Show Oficial]
+X -- Não --> R[🔁 Ajustar / Reensaiar]
+        </pre>
+      </div>
+
+      <div class="legend">
+        <div class="box">🎭 <b>Tronco</b><br>Show oficial que não pode quebrar</div>
+        <div class="box">🌿 <b>Branches</b><br>Testes e variações controladas</div>
+        <div class="box"><span class="ok">✅ MERGE</span><br>Entrou oficialmente no show</div>
+        <div class="box"><span class="warn">🔁 REENSAIO</span><br>Ajustar antes de aprovar</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="btnPdf">📄 Exportar PDF</button>
+    </div>
+
+  </div>
+
+  <script>
+    // Mermaid: renderiza automaticamente
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "dark",
+      flowchart: { curve: "basis" }
+    });
+
+    // PDF: exporta a área do gráfico
+    document.getElementById("btnPdf").addEventListener("click", () => {
+      const el = document.getElementById("exportArea");
+      html2pdf().set({
+        margin: 10,
+        filename: "Arvore_de_Danca_Metodo_Edy.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2, backgroundColor: "#0b0f14" },
+        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" }
+      }).from(el).save();
+    });
+  </script>
+</body>
+</html>
