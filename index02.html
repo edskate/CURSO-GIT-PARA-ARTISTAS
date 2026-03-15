@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Mermaid Graph</title>
+
+<!-- Biblioteca Mermaid -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+h1{
+color:gold;
+}
+
+.mermaid{
+background:#111;
+padding:30px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>📊 Fluxo do Show</h1>
+
+<div class="mermaid">
+graph TD
+
+A[Chegada da equipe] --> B[Checklist figurino]
+B --> C[Aquecimento]
+C --> D[Ensaio rápido]
+D --> E[Show 21:00]
+E --> F[Final do Show]
+F --> G[Guardar Figurino]
+G --> H[guarde]
+H-->j[Just]
+
+</div>
+
+<script>
+mermaid.initialize({
+startOnLoad:true
+});
+</script>
+
+</body>
+</html>
