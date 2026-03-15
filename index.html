@@ -83,30 +83,33 @@
       <div class="card">
         <pre class="mermaid">
 flowchart TD
-A[🎭 Show Base / Tronco] --> B[🦶 Técnica]
+A[🎭 Show Base / Tronco] --> B[🦶]
 A --> C[🎵 Musicalidade]
-A --> D[🎩 Estilo]
+A --> D[🎩 Show-Band]
 A --> E[⏱️ Pocket Show]
-A --> F[🏟️ Palco Grande]
-A --> G[🕺 Turista]
-A --> H[🧪 Ensaio]
+A --> F[🏟️ Palco ]
+A --> G[🕺 ]
+A --> H[🧪 Ensaio-Em Construção]
 
 E --> E1[23 min]
 E --> E2[30 min]
 
-D --> D1[MJ Classic]
-D --> D2[Modern Pop]
+D --> D1[Bad]
+D --> D2[Black]
+D -->D3{Andamento}
 
 B --> X{Aprovado no ensaio?}
-C --> X
+C --> X{Coriografia em andamneto}
 D --> X
 E --> X
 F --> X
 G --> X
 H --> X
 
-X -- Sim --> M[✅ MERGE no Show Oficial]
+X -- Sim --> M[✅ Show Oficial]
 X -- Não --> R[🔁 Ajustar / Reensaiar]
+X -- Andamento --> R[ em processo de construção.]
+
         </pre>
       </div>
 
