@@ -10,4 +10,6 @@ Nunca trabalhe direto na `main`.
 
 ## 🧪 Exercício
 ```bash
+git checkout main
+
 git checkout -b ensaio-coreografia
